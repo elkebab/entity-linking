@@ -1,8 +1,8 @@
-// Visual Studio
+# Visual Studio
 .vs/
 *.pyproj*
 
-// Python
+# Python
 __pycache__/
 env/
 obj/

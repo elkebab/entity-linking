@@ -1,11 +1,12 @@
 # Context-Based Entity Linking
+A mediocre system for entity linking developed as part of a master's thesis.
 
-Probably the slowest program ever designed for entity linking.
+### [Thesis](https://brage.bibsys.no/xmlui/bitstream/handle/11250/2457130/16655_FULLTEXT.pdf)
+
+### [Demo](http://elkebab.pythonanywhere.com/) 
 
 ### Prerequisites
-
-Multiple packages from [NLTK](http://www.nltk.org/) are required, and available through nltk.download(<package-name>):
-
+Multiple NLP packages from [NLTK](http://www.nltk.org/) are required, and available through nltk.download(<package-name>):
 ```
 'punkt'
 'averaged_perceptron_tagger'

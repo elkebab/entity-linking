@@ -1,5 +1,5 @@
 from entity_linking.models.Candidate import Candidate
-from multiprocessing import Process, Queue
+#from multiprocessing import Process, Queue
 from math import pow
 
 
@@ -19,7 +19,7 @@ class Entity:
                 self.dbpedia_default = c
                 break
        
-    """      
+         
     def calculate_scores(self, queue, avg_score):  
         cand = 0
         
@@ -55,8 +55,8 @@ class Entity:
             self.candidates[0].score = 1
             
         queue.put(self)   
-    """
-
+    
+    '''
     def __multiproc_candidate_scoring__(self, candidate, cand_queue, avg_score):
         candidate.score = 0 # Reset for this iteration
         
@@ -76,7 +76,7 @@ class Entity:
 
         cand_queue.put(candidate)
 
-
+    
     def calculate_scores(self, entity_queue, avg_score):             
         cand_queue = Queue()
         jobs = []
@@ -116,7 +116,7 @@ class Entity:
             self.candidates[0].score = 1
 
         entity_queue.put(self)
-    
+'''
 
     def __scale_scores__(self):
         sum = 0

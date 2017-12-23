@@ -1,0 +1,10 @@
+// Visual Studio
+.vs/
+*.pyproj*
+
+// Python
+__pycache__/
+env/
+obj/
+
+

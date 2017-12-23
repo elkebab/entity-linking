@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="container">
+        <h2><label for="text">Text to annotate:</label></h2>
+        <form action="/annotate" method="POST">
+            <div class="form-group">
+                <textarea class="form-control" rows="5" name="text">{{input_text}}</textarea>
+                <br />
+                <input class="btn btn-primary btn-large" type="submit" value="&#9889; Annotate &#9889;"/><br /> <span>(This might take some time &#9785;)</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<p>
+    <i>
+        <b>Examples:</b><br />
+        Gerrard used to play alongside Carragher for Liverpool  <span style="color:ghostwhite;">(Don't swap the positions of "Gerrard" and "Carragher". Ever.)</span><br />
+        Gerrard is a musician from Melbourne  <span style="color:ghostwhite;">(Use "Melbourne" instead of "Australia", because cities are best)</span><br />
+        Pluto is a good friend of Mickey and Minnie Mouse  <span style="color:ghostwhite;">(Don't even think about removing "Mouse")</span><br />
+        Pluto is a dwarf planet discovered by Tombaugh  <span style="color:ghostwhite;">(Pluto has nothing to do with Neptune)</span><br />
+    </i>
+</p>
+
+<div class="row">
+    <div class="container">
+        <h2>{{title}}</h2>
+        <p>{{result|safe}}</p>
+        <p>{{time}}</p>
+    </div>
+</div>
+{% endblock %}
